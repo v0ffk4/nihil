@@ -31,6 +31,24 @@ body {
 	}
 }
 
-p {
-	hyphens: auto;
+/* blocks */
+.block {
+	padding: 15px;
+}
+
+.width-full {
+	width: 100%;
+}
+
+.width-part {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#wrapper {
+	min-height: calc(100vh - 120px );
+	padding-top:100px;
+	@media $medium {
+		padding-top: 0;
+	}
 }
