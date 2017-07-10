@@ -1,6 +1,8 @@
 html {
 	font-size: 62.5%;
 	box-sizing: border-box;
+	color: $baseBlack;
+	position: relative;
 }
 
 *, *:before, *:after {
@@ -19,7 +21,7 @@ body {
 	padding: 0;
 	color: $color-main;
 	background-color: $color-background;
-	font-family: $font-main;
+	font-family: $fontMain;
 	font-weight: $font-weight-light;
 	font-size:1.5rem;
 	text-align: justify;
@@ -46,9 +48,60 @@ body {
 }
 
 #wrapper {
-	min-height: calc(100vh - 120px );
-	padding-top:100px;
+	min-height: calc(100vh - 90px );
 	@media $medium {
 		padding-top: 0;
+	}
+}
+
+/* links */
+a{
+	color: $baseBlack;
+	transition-duration: $transitionTime;
+}
+
+a:hover {
+	color: $red;
+	transition-duration: $transitionTime;
+}
+
+nav {
+	a {
+		text-decoration: none;
+	}
+	a:visited {
+		color: $baseBlack;
+	}
+}
+
+/* interface */
+button {
+	border: none;
+	background: $baseBlack;
+	color: #fff;
+	font-family: $fontMain;
+	text-transform: uppercase;
+	padding: 10px 25px;
+	transition-duration: $transitionTime;
+}
+
+button:hover {
+	cursor: pointer;
+	background: $red;
+}
+
+.input-invalid {
+	border: 1px solid $red;
+}
+
+.input-valid {
+	border: 1px solid $green;
+}
+
+/* gfx */
+svg {
+	.frame {
+		fill: none;
+		stroke: none;
 	}
 }

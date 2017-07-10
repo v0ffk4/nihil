@@ -4,38 +4,103 @@ p,li	{
 
 h1, h2, h3,
 h4, h5, h6 {
+	font-family: $fontHeader;
+}
+
+h4,h5,h6 {
 	font-family: $fontMain;
-	font-weight: $fontWeightBold;
 }
 
-h6 {
-	font-size: 1.8rem;
-	line-height: 2.2rem;
-}
+/* 1.25 ratio */
+/**** 1.3333 ratio ****/
 
-h5 {
-	font-size: 2.1rem;
-	line-height: 2.52rem;
-	margin: 1rem 0;
+h1 {
+	font-size: $fBase4Sml;
+	line-height: calc($fBase4Sml * 1.4rem);
+	@media $medium {
+		font-size: $fBase4Med;
+		line-height: calc($fBase4Med * 1.4rem);
+	}
+	@media $large {
+		font-size: $fBase4Lrg;
+		line-height: calc($fBaseLrg * 1.4rem);
+	}
 }
 
 h2 {
-	font-size: 2.8rem;
-	line-height: 3.36rem;
+	font-size: $fBase3Sml;
+	line-height: calc($fBase3Sml * 1.4rem);
+	@media $medium {
+		font-size: $fBase3Med;
+		line-height: calc($fBase3Med * 1.4rem);
+	}
+	@media $large {
+		font-size: $fBase3Lrg;
+		line-height: calc($fBaseLrg * 1.4rem);
+	}
 }
 
-h1 {
-	font-size: 2.8rem;
-	line-height: 3.36rem;
+h3 {
+	font-size: $fBase2Sml;
+	line-height: calc($fBase2Sml * 1.4rem);
 	@media $medium {
-		font-size: 4.8rem;
-		line-height: 5.76rem;
+		font-size: $fBase2Med;
+		line-height: calc($fBase2Med * 1.4rem);
+	}
+	@media $large {
+		font-size: $fBase2Lrg;
+		line-height: calc($fBaseLrg * 1.4rem);
+	}
+}
+
+h4 {
+	font-size: $fBase2Sml;
+	line-height: calc($fBase2Sml * 1.2rem);
+	@media $medium {
+		font-size: $fBase2Med;
+		line-height: calc($fBase2Med * 1.2rem);
+	}
+	@media $large {
+		font-size: $fBase2Lrg;
+		line-height: calc($fBaseLrg * 1.2rem);
+	}
+}
+
+h5 {
+	font-size: $fBase1Sml;
+	line-height: calc($fBase1Sml * 1.4rem);
+	@media $medium {
+		font-size: $fBase1Med;
+		line-height: calc($fBase1Med * 1.4rem);
+	}
+	@media $large {
+		font-size: $fBase1Lrg;
+		line-height: calc($fBaseLrg * 1.4rem);
+	}
+}
+
+h6 {
+	font-size: $fBase1Sml;
+	line-height: calc($fBase1Sml * 1.4rem);
+	@media $medium {
+		font-size: $fBase1Med;
+		line-height: calc($fBase1Med * 1.4rem);
+	}
+	@media $large {
+		font-size: $fBase1Lrg;
+		line-height: calc($fBaseLrg * 1.4rem);
 	}
 }
 
 p {
 	font-weight: $fontWeightLight;
-	font-size: 1.8rem;
-	line-height: 2.2rem;
 	hyphens: auto;
+	line-height: calc($fBaseLrg * 1.6rem);
+	font-size: $fBaseSml;
+	@media $medium {
+		font-size: $fBaseMed;
+	}
+	@media $large {
+		font-size: $fBaseLrg;
+	}
 }

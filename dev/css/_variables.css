@@ -1,33 +1,90 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300italic,300,700);
 
-/*
+
 @font-face {
-	font-family: Proxima-Normal; 
-	src: url(../fonts/Proxima-Nova-Light.otf);
+	font-family: Roboto;
+	src: url(../f/Roboto-Light.ttf);
 	}
 
 @font-face {
-	font-family: Proxima-Bold; 
-	src: url(../fonts/Proxima-Nova-Bold.otf);
-	}
-*/
+	font-family: Roboto-Italic;
+	src: url(../f/Roboto-LightItalic.ttf);
+}
 
-$font-main: Lato, Helvetica, Arial, sans-serif;
-$font-weight-light:		300;
-$font-weight-normal:	400;
-$font-weight-bold:		600;
 
-$font-size-large:	1.8rem;
-$font-size-medium:	1.4rem;
-$font-size-small:	1rem;
+@font-face {
+	font-family: Tornado-Black;
+	src: url(../f/Tornado-BlackcItalic.otf);
+}
 
-$offwhite:		#eeed8b6;
+/* Typography */
+$fontMain: Roboto, Helvetica, Arial, sans-serif;
+$fontHeader: Tornado-Black, Helvetica, Arial, sans-serif;
 
+$fontWeightLight:	300;
+$fontWeightNormal:	400;
+$fontWeightBold:	600;
+
+$fontSizeLarge:		1.8rem;
+$fontSizeMedium:	1.4rem;
+$fontSizeSmall:		1rem;
+
+/* Font Size */
+/* Large */
+$fBase01Lrg:	1.3503rem;
+$fBaseLrg:		1.8rem;
+$fBase1Lrg:		2.3994rem;
+$fBase2Lrg:		3.1984rem;
+$fBase3Lrg:		4.2635rem;
+$fBase4Lrg:		5.6832rem;
+$fBase5Lrg:		7.5757rem;
+$fBase6Lrg:		10.0984rem;
+
+/* medium */
+$fBase01Med:		1.2003rem;
+$fBaseMed:		1.6rem;
+$fBase1Med:		2.1328rem;
+$fBase2Med:		2.843rem;
+$fBase3Med:		3.7897rem;
+$fBase4Med:		5.0517rem;
+$fBase5Med:		6.734rem;
+$fBase6Med:		8.9764rem;
+
+/* Small */
+$fBase01Sml:	1.2rem;
+$fBaseSml:		1.4rem;
+$fBase1Sml:		1.8662rem;
+$fBase2Sml:		2.4876rem;
+$fBase3Sml:		3.316rem;
+$fBase4Sml:		4.4203rem;
+$fBase5Sml:		5.8922rem;
+$fBase6Sml:		7.8543rem;
+
+/* Units */
+$topMargin: 150px;
+$blockPadding: 20px;
+
+/* fx */
+$boxShadow:		0 20px 60px hsla(180, 7%, 70%, 1);
+
+
+
+/* Colors */
+$baseBlack:		hsla(0, 0%, 20%, 1);
+$baseGrey:		hsla(195, 10%, 92%, 1);
+$red:			hsla(13, 65%, 63%, 1);
+$green:			hsla(68, 65%, 63%, 1);
+$green:			hsla(68, 65%, 63%, 1);
+$blue:			hsla(216, 68%, 54%, 1);
+
+/* @media scales */
 $small:		screen and (min-width:600px);
+$small1:	screen and (min-width:750px);
 $medium:	screen and (min-width:900px);
 $large:		screen and (min-width:1200px);
+$xlarge:	screen and (min-width:1600px);
 
-$container-default-width:	80%;
-$container-max-width:		1200px;
+$containerDefaultWidth:	80%;
+$containerMaxWidth:		1200px;
 
-$link-transition-duration: 0.5s;
+$transitionTime: 0.5s;
