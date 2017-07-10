@@ -41,16 +41,19 @@ gulp.task('tplCp', function() {
 		.pipe(livereload());
 	});
 
-//	//concatinate & minify & rename javascript
-//	gulp.task('jsConcat', function(){
-//		gulp.src(devJs + '*.js')
-//			.pipe(concat('script.js'))
-//			.pipe(uglify())
-//			.pipe(rename({suffix: '.min'}))
-//			.pipe(gulp.dest(out + '/j'))
-//			.pipe(livereload());
-//	});
-//
+	//concatinate & minify & rename javascript
+	gulp.task('jsConcat', function(){
+		gulp.src([
+			'dev/*/!(assembly)*.js',
+			'dev/_common/assembly.js'
+		])
+			.pipe(concat('script.js'))
+			.pipe(uglify())
+			.pipe(rename({suffix: '.min'}))
+			.pipe(gulp.dest(out + '/j'))
+			.pipe(livereload());
+	});
+
 //	//watch & process
 //	gulp.task('watch', function() {
 //		livereload.listen();
@@ -59,5 +62,5 @@ gulp.task('tplCp', function() {
 //		gulp.watch(devJs + '*.js', ['jsConcat']);
 //	});
 
-gulp.task( 'default', [ 'tplCp', 'cssPrep' ] );
+gulp.task( 'default', [ 'tplCp', 'cssPrep', 'jsConcat' ] );
 //gulp.task( 'default', [ 'tplCp', 'cssPrep', 'jsConcat', 'watch' ] );
