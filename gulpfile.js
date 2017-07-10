@@ -44,7 +44,7 @@ gulp.task('tplCp', function() {
 	//concatinate & minify & rename javascript
 	gulp.task('jsConcat', function(){
 		gulp.src([
-			'dev/*/!(assembly)*.js',
+			'dev/**/!(assembly)*.js',
 			'dev/_common/assembly.js'
 		])
 			.pipe(concat('script.js'))
@@ -54,13 +54,13 @@ gulp.task('tplCp', function() {
 			.pipe(livereload());
 	});
 
-//	//watch & process
-//	gulp.task('watch', function() {
-//		livereload.listen();
-//		gulp.watch(devTpl + '**/*.{php,tpl,html}', ['tplCp']);
-//		gulp.watch(devCss + '**/*.css', ['cssPrep']);
-//		gulp.watch(devJs + '*.js', ['jsConcat']);
-//	});
+	//watch & process
+	gulp.task('watch', function() {
+		livereload.listen();
+		gulp.watch('dev/*.{php,tpl,html}', ['tplCp']);
+		gulp.watch('dev/**/*.css', ['cssPrep']);
+		gulp.watch('dev/**/*.js', ['jsConcat']);
+	});
 
-gulp.task( 'default', [ 'tplCp', 'cssPrep', 'jsConcat' ] );
+gulp.task( 'default', [ 'tplCp', 'cssPrep', 'jsConcat', 'watch' ] );
 //gulp.task( 'default', [ 'tplCp', 'cssPrep', 'jsConcat', 'watch' ] );
