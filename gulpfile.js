@@ -28,19 +28,19 @@ gulp.task('tplCp', function() {
 		.pipe(livereload());
 });
 
-//	//compile SASS synthax / minify
-//	gulp.task('cssPrep', function() {
-//		gulp.src(devCss + 'style.css')
-//			.pipe(postcss([
-//				precss(),
-//				autoprefixer(),
-//				cssnano()
-//		]))
-//		.on('error', gutil.log)
-//			.pipe(gulp.dest(out + '/c'))
-//			.pipe(livereload());
-//	});
-//
+//compile SASS synthax / minify
+	gulp.task('cssPrep', function() {
+		gulp.src('dev/style.css')
+			.pipe(postcss([
+				precss(),
+				autoprefixer(),
+				cssnano()
+		]))
+		.on('error', gutil.log)
+		.pipe(gulp.dest(out + '/c'))
+		.pipe(livereload());
+	});
+
 //	//concatinate & minify & rename javascript
 //	gulp.task('jsConcat', function(){
 //		gulp.src(devJs + '*.js')
@@ -59,5 +59,5 @@ gulp.task('tplCp', function() {
 //		gulp.watch(devJs + '*.js', ['jsConcat']);
 //	});
 
-gulp.task( 'default', [ 'tplCp' ] );
+gulp.task( 'default', [ 'tplCp', 'cssPrep' ] );
 //gulp.task( 'default', [ 'tplCp', 'cssPrep', 'jsConcat', 'watch' ] );
